@@ -1,5 +1,13 @@
 require 'sinatra'
 
+
+
 get '/' do
-  "Hello World!"
+  haml :index, :format => :html5
+end
+
+#This will have to go else where
+
+def print_information
+    puts "Infoo!!"
 end
