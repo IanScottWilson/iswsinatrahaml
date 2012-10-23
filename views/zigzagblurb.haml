@@ -1,0 +1,69 @@
+%p.tagline.zigzag
+    SVG (Scalable Vector Graphics) has been around for some time, but only recently have most browsers enabled rendering of vector graphics natively.
+%p.tagline.zigzag.contrast_text
+    The great advantage of SVG graphics is their scalability - they are specifications of <em>how</em> to draw a graphic rather than bitmaps.
+%p.tagline.zigzag
+    As the web has come to be the main way users interact with their computers, browsers are called upon to function as universal interfaces. In that spirit, this page contains a small application that runs in the browser and allows the user to draw recursive figures of various kinds.
+%a{:href => "#", :onclick => "Effect.toggle('toggle_explanation', 'blind'); return false;"}
+    Toggle next paragraph ...
+#toggle_explanation.tagline.zigzag{:style => "display:none;"}
+    %div
+        %p
+            The application embedded in this page will generate the SVG (and insert it into the page) for two types of figures.  
+        %p
+            The first type are generally known as  Lindenmayer systems or L-Systems. These use rules to recursively rewrite an initial string (the 'axiom'), then the successor string ... ad infinitum. By interpreting the results as instructions to turn and move, we generate figures. You can imagine this as instructions to yourself. For example, if 'F' is interpreted to mean 'take one step forward', '+' to mean 'turn 90° to the right' and '-' to mean 'turn 90° to the left' then
+        %p.centeredtext
+            F+F+F+F+
+        %p
+            would take you around a square and leave you facing in the same direction you started in.
+        %p
+            If the rewrite rule is 'replace F with F+F+FF+F+' and you apply this repeatedly, you generate a (rather boring) increasingly large grid. The rule 'replace F with F-F+F+F-F' applied to a beginning string F-F-F-F leads to the much more interesting 'Box Fractal' - see in presets.
+        %p
+            There are predefined curves of various (famous) kinds in the 'Preset Curves' section below. Click on the links to generate them. You can examine - and change - their parameters in the 'Lsystem' panel. Colors can be changed in the 'Colors' panel.
+        %p
+            This is a very brief introduction to this topic. See
+            %a{:href => "http://en.wikipedia.org/wiki/L-system", :target => "_blank"}
+                Lindenmeyer systems at Wikipedia
+            for more information. Also, this very informative book is made freely available online -
+            %a{:href => "http://algorithmicbotany.org/papers/#abop", :target => "_blank"}
+                "The Algorithmic Beauty of Plants"
+            One of the authors is the eponymous Aristid Lindenmayer. The book is fascinating. (Some plant like productions are included in 'Preset Curves'.)
+%p.tagline.zigzag
+    Clicking on any named curve in the following list of preset curves will draw and display it on this page. If you open the controls (below), you can play with the parameters in 'L-System Controls'.
+#presets.tagline.zigzag
+    %h3
+        Preset Curves
+    %p#dragoncurve.preset.contrast_text
+        Dragon Curve
+    %p#sierpinskigasket.preset.contrast_text
+        Sierpinski gasket
+    %p#hexagonalgospercurve.preset.contrast_text
+        Hexagonal Gosper Curve
+    %p#peanospacefillingcurve.preset.contrast_text
+        Peano's Space Filling Curve
+    %p#hilbertspacefillingcurve.preset.contrast_text
+        Hilbert's Space Filling Curve
+    %p#levyccurve.preset.contrast_text
+        Lévy C Curve
+    %p#boxfractal.preset.contrast_text
+        Boxfractal
+    %p#fractalalien.preset.contrast_text
+        Fractal alien!
+    %p#crossstitchfractal.preset.contrast_text
+        Cross Stitch Fractal
+    %p#greekkey.preset.contrast_text
+        Greek Key
+    %p#penrosetile.preset.contrast_text
+        Penrose Tiling
+    %p#islandsandlakes.preset.contrast_text
+        Islands and Lakes
+    %p#plantnumber1.preset.contrast_text
+        Plant #1
+    %p#plantnumber2.preset.contrast_text
+        Plant #2
+    %p#plantnumber3.preset.contrast_text
+        Plant #3
+    %p#plantnumber4.preset.contrast_text
+        Plant #4
+
+

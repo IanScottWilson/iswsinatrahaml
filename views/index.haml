@@ -1,20 +1,20 @@
-!!! 5
-%html{:id => "js", :class => " mz-js mz-no-flexbox mz-canvas mz-canvastext mz-webgl mz-no-touch mz-geolocation mz-postmessage mz-no-websqldatabase mz-indexeddb mz-hashchange mz-history mz-draganddrop mz-websockets mz-rgba mz-hsla mz-multiplebgs mz-backgroundsize mz-borderimage mz-borderradius mz-boxshadow mz-textshadow mz-opacity mz-cssanimations mz-csscolumns mz-cssgradients mz-no-cssreflections mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fontface mz-generatedcontent mz-video mz-audio mz-localstorage mz-sessionstorage mz-webworkers mz-applicationcache mz-svg mz-inlinesvg mz-smil mz-svgclippaths mz-no-bgrepeatround mz-no-bgrepeatspace mz-no-getusermedia mz-no-pagedcontent"}
-
-    %head 
-        %title "ianscottwilson.com: web developers and IT specialists North London"
-        %meta{"http-equiv" => "content-type", :content => "text/html; charset=UTF-8"}
-        -# @page_description passed by get call to page via routes
-        %meta{:name => "Description", :content => @page_description}
-        %meta{"http-equiv" => "x-ua-compatible", :content => "ie=edge"}
-        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
-        %link{:rel => "stylesheet", :href => "css/screen.css"}
-        %link{:rel => "stylesheet", :href => "css/screen-narrow.css", :media => "only screen and (max-width:550px)" }
-        %link{:rel => "stylesheet", :href => "css/screen-wide.css", :media => "only screen and (min-width:800px) and (min-height:540px)"}
-    %body
-        %header.header
-            .path
-                %h2 Welcome to our site!
-            
-                %h1#title Coming soon!
-    
+%nav#navigation.navigation
+    %ul
+        %li.audio-video
+            %a{:href => "webdev"}
+                Web Development
+        %li.canvas
+            %a{:href => "contact"}
+                Contact
+        %li.css3
+            %a{:href => "adhoc"}
+                Ad Hoc
+        %li.getusermedia
+            %a{:href => "itspecialists"}
+                I.T. Specialists
+        %li.svg
+            %a{:href => "blog"}
+                Blog
+        %li.newsvg
+            %a{:href => "zigzag"}
+                SVG App        

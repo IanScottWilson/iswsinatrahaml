@@ -1,0 +1,96 @@
+%p.drawing_controls
+    %a{:href => "#", :onclick => "Effect.toggle('toggle_drawing_controls', 'blind'); return false;"}
+        Toggle controls ...
+
+#toggle_drawing_controls.drawing_controls.tagline.zigzag{:style => "display:none;"}
+    %div
+        %p
+            %a{:href => "#", :onclick => "Effect.toggle('toggle_color_controls', 'blind'); return false;"}
+                Toggle Color Controls ...
+        #toggle_color_controls.tagline.zigzag{:style => "display:none;"}
+            %h3
+                Color Picker
+            %input#hex3{:style => "width: 6em;", :type => "text"}
+            %p#staticpicker
+                Color Picker
+        %p
+            %a{:href => "#", :onclick => "Effect.toggle('toggle_lsystem_controls', 'blind'); return false;"}
+                Toggle L-System Controls ...
+        #toggle_lsystem_controls.tagline.zigzag{:style => "display:none;"}
+            %legend
+                L-System Controls
+            %fieldset#lsystemfields
+                %label.red{:for => "axiom"}
+                    Axiom
+                %input#axiom{:value =>"F++F++F", :type => "text", :name => "axiom"}
+                %br/
+                %label.red{:for => "rules"} 
+                    Rules
+                %textarea#rules{:rows => "3", :cols => "20"}
+                    \{"-":"-","+":"+","F":"F-F++F-F"}
+                %br/
+                %label.red{:for => "delta"}
+                    Delta
+                %input#delta{:value => "60", :type => "text", :name => "delta"}
+                %br/
+                %label.red{:for => "level"}
+                    Level
+                %input#level{:value => "5", :type => "text", :name => "level"}
+                %br/
+                %label.red{:for => "fill"}
+                    Fill Color
+                %input#fill{:value => "none", :type => "text", :name => "fill"}
+                %br/
+                %label.red{:for => "strokewidth"}
+                    Strokewidth
+                %input#strokewidth{:value => "5", :type => "text", :name => "strokewidth"}
+                %br/
+                %label.red{:for => "rotationangle"}
+                    Rotation angle
+                %input#rotationangle{:value => "0", :type => "text", :name => "rotationangle"}
+                %br/
+                %label.red{:for => "scalefactor"}
+                    Scale factor
+                %input#scalefactor{:value => "1", :type => "text", :name => "scalefactor"}
+                %br/
+            %p
+                %button#drawsvg
+                    Draw SVG
+            %p
+                %button#rotatesvg
+                    Rotate figure
+            %p
+                %button#drawplant
+                    Draw plant
+            %p
+                %button#scalesvg
+                    Scale figure
+        %p
+            %a{:href => "#", :onclick => "Effect.toggle('toggle_multipoly_controls', 'blind'); return false;"}
+                Toggle Multipoly Controls
+        #toggle_multipoly_controls.tagline.zigzag{:style => "display:none;"}
+            %legend
+                Multipoly Controls
+            %fieldset
+                %lable.red{:for => "lengths3"}
+                    Lengths
+                %input#lengths3{:value => "100, 100", :type => "text", :name => "lengths"}
+                %br/
+                %lable.red{:for => "angles3"}
+                    Angles
+                %input#angles3{:value => "91, 182", :type => "text", :name => "angles"}
+                %br/
+                %lable.red{:for => "strokewidths3"}
+                    Stroke-widths
+                %input#strokewidths3{:value => "1, 1", :type => "text", :name => "strokewidths"}
+                %br/
+            %p
+                %button#addcolor
+                    Add color
+                %button#clearcolors
+                    Clear colors
+            %p
+                %button#drawmultipoly
+                    Draw multipoly
+#drawingarea
+    #graphic

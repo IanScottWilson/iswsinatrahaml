@@ -1,0 +1,64 @@
+!!! 5
+%html{:id => "js", :class => " mz-js mz-no-flexbox mz-canvas mz-canvastext mz-webgl mz-no-touch mz-geolocation mz-postmessage mz-no-websqldatabase mz-indexeddb mz-hashchange mz-history mz-draganddrop mz-websockets mz-rgba mz-hsla mz-multiplebgs mz-backgroundsize mz-borderimage mz-borderradius mz-boxshadow mz-textshadow mz-opacity mz-cssanimations mz-csscolumns mz-cssgradients mz-no-cssreflections mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fontface mz-generatedcontent mz-video mz-audio mz-localstorage mz-sessionstorage mz-webworkers mz-applicationcache mz-svg mz-inlinesvg mz-smil mz-svgclippaths mz-no-bgrepeatround mz-no-bgrepeatspace mz-no-getusermedia mz-no-pagedcontent"}
+
+    %head 
+        %title "ianscottwilson.com: web developers and IT specialists North London"
+        %meta{"http-equiv" => "content-type", :content => "text/html; charset=UTF-8"}
+        -# @page_description passed by get call to page via routes
+        %meta{:name => "Description", :content => @page_description}
+        %meta{"http-equiv" => "x-ua-compatible", :content => "ie=edge"}
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+        %link{:rel => "stylesheet", :href => "css/screen.css"}
+        %link{:rel => "stylesheet", :href => "css/screen-narrow.css", :media => "only screen and (max-width:550px)" }
+        %link{:rel => "stylesheet", :href => "css/screen-wide.css", :media => "only screen and (min-width:800px) and (min-height:540px)"}
+        =@local_head
+    %body
+        %div{:class => @page_type , :id => @page_id}
+            %header.header
+                .path=@path_content
+                %p.tagline
+                    =@tagline_content
+            =yield
+            %footer{:class => "footer"}
+                %p
+                    %a{:href => $contact_address}
+                        contact ianscottwilson.com
+
+        %script{:src => "js/modernizr.js"}
+        
+        :css
+            @font-face {
+                font-family: "font";
+                src: url("https://")
+            }
+            @media (touch-enabled) , (-webkit-touch-enabled) , (-moz-touch-enabled) , (-o-touch-enabled) , (-ms-touch-enabled) , (modernizr) {
+                #touch {
+                    top: 9px;
+                    position: absolute
+                }
+            }
+            @media (transform-3d) , (-webkit-transform-3d) , (-moz-transform-3d) , (-o-transform-3d) , (-ms-transform-3d) , (modernizr) {
+                #csstransforms3d {
+                    left: 9px;
+                    position: absolute;
+                    height: 3px;
+                }
+            }
+            #generatedcontent:after {
+                content: ":)";
+                visibility: hidden
+            }
+        ­
+        :css
+            #modernizr {
+                background-repeat: round;
+            }
+        
+        ­
+        :css
+            #modernizr {
+                background-repeat: space;
+            }
+
+        %script{:src => "js/script.js"}
+        =@local_bottom
