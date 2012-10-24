@@ -19,7 +19,7 @@
                 %p.tagline
                     =@tagline_content
             =yield
-            %footer{:class => "footer"}
+            %footer.footer{:class => @zigzag && "cleardrawing"}
                 %p
                     %a{:href => $contact_address}
                         contact ianscottwilson.com

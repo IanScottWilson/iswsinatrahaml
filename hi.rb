@@ -59,6 +59,7 @@ get '/blog' do
 end
 
 get '/zigzag' do
+  @zigzag = true
   @local_head = haml :drawingcodelinks
   @local_bottom = haml :zigzagjslinks
   @page_type = "page-plain"
@@ -68,6 +69,26 @@ get '/zigzag' do
   @tagline_content = haml :zigzagblurb
   haml :zigzag, :layout => :template1, :format => :html5
 end
+
+get '/newtech' do
+  @page_type = "page-plain nonzz"
+  @page_id = "nomatter"
+  @page_description = "New Web Technologies: HTML5, CSS3, SVG, WebGL, Audio-Visual"
+  @path_content = haml :newtechpath
+  @tagline_content = haml :newtechblurb
+  haml :newtech, :layout => :template1, :format => :html5
+end
+
+get '/gallery' do
+  @page_type = "page-plain nonzz"
+  @page_id = "nomatter"
+  @page_description = "Portfolio: Sites we have built"
+  @path_content = haml :gallerypath
+  @tagline_content = haml :galleryblurb
+  haml :gallery, :layout => :template1, :format => :html5
+end
+
+
 #This will have to go else where
 
 def print_information
